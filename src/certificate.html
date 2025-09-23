@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Certificate of Half Marathon</title>
+
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            margin: 0;
+            padding: 0.9;
+            background: #f0f0f0;
+        }
+
+        .Certificate-container {
+            width: 1000px;
+            margin: 20px auto;
+            padding: 30px;
+            background: white;
+            border: 10px solid #007cc2;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .Certificate-header,
+        .certificate-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .Certificate-header div,
+        .certificate-footer div {
+            width: 45%;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .Certificate-header .center {
+            width: 10%;
+            text-align: center;
+        }
+
+        .Certificate-header img {
+            width: 80px;
+            margin-bottom: center;
+        }
+
+        .certificate-title {
+            text-align: center;
+            font-size: 36px;
+            color: #007cc2;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        .presented-text {
+            text-align: center;
+            font-size: 20px;
+            margin-bottom: 10px
+        }
+
+        .recipient-name {
+            text-align: center;
+            font-size: 26px;
+            color: #cc9933;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .description{
+            text-align: center;
+            font-size: 16px;
+            width:80%;
+            margin: 0 auto 20px auto;
+        }
+
+        .details-row{
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+            font-size: 16px;
+            padding: 0 41px;
+        }
+        .certificate-footer img{
+            width: 100px;
+            margin-top: 20px;
+        }
+
+        .datetime, 
+        .signature{
+            text-align: center;
+            font-size: 15px ;
+            margin-top: 10px
+        }
+
+        
+
+    </style>
+</head>
+
+<body>
+    <div class="Certificate-container">
+        <div class="Certificate-header">
+            <div>
+                Register-Id:-{{registerId}} <br>
+                E-Mail:{{emailId}} <br>
+                Phone No.: {{phoneNumber}}
+            </div>
+            <div class="center">
+                <img src="http://localhost:3000/assets/logo/logo1.png" alt="MSME LOGO">
+            </div>
+            <div style="text-align: right; text-wrap: wrap;">
+                {{address}}
+            </div>
+        </div>
+
+        <div class="certificate-title">Certificate of Half Marathon</div>
+
+        <div class="presented-text"> This Certificate Presented to</div>
+        <div class="recipient-name">{{fullName}}</div>
+
+        <div class="description">
+            The certificate of achievement is awarded to individuals who have demonstrated outstanding performance in
+            their field. Here’s an example text for a certificate.
+        </div>
+        <div class="details-row">
+            <div>Date Of Birth: {{dateOfBirth}}</div>
+            <div>Gender: {{gender}}</div>
+            <div>Blood Group: {{bloodGroup}}</div>
+        </div>
+        <div class="certificate-footer">
+            <div>
+                <div class="datetime">
+                    {{DateTime}}<br>
+                    ______________________<br>
+                    DATE-TIME
+                </div>
+            </div>
+            <div style="text-align: center;">
+                <img src="http://localhost:3000/assets/logo/logo3.png" alt="CERTIFIED SEAL">
+            </div>
+            <div>
+                <div class="signature">
+                    ______________________<br>
+                    SIGNATURE
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
